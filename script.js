@@ -28,6 +28,7 @@ function saveNotes() {
     // Storage may be full or blocked; the app still works for this session.
   }
 }
+// update note count
 
 function updateCount() {
   if (notes.length === 0) {
@@ -38,7 +39,7 @@ function updateCount() {
     noteCount.textContent = "You have " + notes.length + " notes.";
   }
 }
-
+//render notes
 function render() {
   notesList.replaceChildren();
 
@@ -91,7 +92,7 @@ function render() {
 
   updateCount();
 }
-
+// add note
 function addNote(event) {
   event.preventDefault();
   const text = noteInput.value.trim();
@@ -119,7 +120,7 @@ function addNote(event) {
   render();
   noteInput.focus();
 }
-
+// delete notes
 function deleteNote(id) {
   notes = notes.filter(function (note) {
     return note.id !== id;
