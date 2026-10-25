@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Notes App
 
 A small notes app built with plain HTML, CSS and JavaScript. You can write short notes, sort them into categories, search through them and delete the ones you no longer need. Your notes are saved in the browser, so they are still there after a refresh.
@@ -26,3 +27,6 @@ A small notes app built with plain HTML, CSS and JavaScript. You can write short
 - How to rebuild a list from an array with `createElement` and `textContent`, which keeps user text safe from HTML injection.
 - How to save and load data with `localStorage`, `JSON.stringify` and `JSON.parse`.
 - How to make small, clear Git commits for each step of a project.
+=======
+# quicknotes-app
+>>>>>>> 2fcc4c13b5b69db7583127293d121e2a26893256
