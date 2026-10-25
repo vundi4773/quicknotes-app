@@ -8,7 +8,7 @@ const searchInput = document.querySelector("#search-input");
 const notesList = document.querySelector("#notes-list");
 const noteCount = document.querySelector("#note-count");
 const errorMessage = document.querySelector("#error-message");
-
+//load notes
 let notes = loadNotes();
 
 function loadNotes() {
@@ -20,7 +20,7 @@ function loadNotes() {
     return [];
   }
 }
-
+// save notes
 function saveNotes() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
