@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef1f4;
+}
+
+header {
+  background: #1d4e5f;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+/* Form */
+#note-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#note-form label {
+  font-weight: 600;
+}
+
+#note-input {
+  flex: 1;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid #b8c2cc;
+  border-radius: 6px;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #7fb7c9;
+  outline-offset: 1px;
+}
+
+#search-input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  background: #1d4e5f;
+  color: #ffffff;
+  border-color: #1d4e5f;
+}
+
+button:hover {
+  background: #14363f;
+}
+
+#error-message {
+  color: #c0392b;
+  font-weight: 600;
+  min-height: 1.5em;
+  margin: 8px 0 0;
+}
+
+#note-count {
+  color: #52606d;
+}
+
+/* Notes */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  margin: 0 0 12px;
+  border: 1px solid #d9e0e6;
+  border-left-width: 6px;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.note-text {
+  margin: 0 0 6px;
+  overflow-wrap: anywhere;
+}
+
+.note-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #52606d;
+}
+
+.note-category {
+  font-weight: 600;
+}
+
+.delete-btn {
+  background: #ffffff;
+  color: #9b1c1c;
+  border-color: #9b1c1c;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background: #9b1c1c;
+  color: #ffffff;
+}
+
+.empty-message {
+  color: #52606d;
+  font-style: italic;
+}
+
+/* Category styles */
+.category-personal {
+  border-left-color: #1a9a8a;
+}
+
+.category-personal .note-category {
+  color: #11695e;
+}
+
+.category-work {
+  border-left-color: #8b1a1a;
+}
+
+.category-work .note-category {
+  color: #8b1a1a;
+}
+
+.category-study {
+  border-left-color: #2563eb;
+}
+
+.category-study .note-category {
+  color: #1d4ed8;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .note {
+    flex-direction: column;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}

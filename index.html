@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Notes App</h1>
+    <p>Write it down, sort it out, find it later.</p>
+  </header>
+
+  <main>
+    <section id="add-section">
+      <h2>Add a note</h2>
+      <form id="note-form" novalidate>
+        <label for="note-input">Note</label>
+        <input type="text" id="note-input" name="note" placeholder="Type your note here">
+
+        <label for="note-category">Category</label>
+        <select id="note-category" name="category">
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="Study">Study</option>
+        </select>
+
+        <button type="submit">Add Note</button>
+      </form>
+      <p id="error-message" role="alert"></p>
+    </section>
+
+    <section id="notes-section">
+      <h2>Your notes</h2>
+      <label for="search-input" class="visually-hidden">Search notes</label>
+      <input type="search" id="search-input" placeholder="Search your notes">
+      <p id="note-count"></p>
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Notes are saved in your browser.</p>
+  </footer>
+</body>
+</html>
